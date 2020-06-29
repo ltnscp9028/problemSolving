@@ -1,13 +1,21 @@
+#define ll long long
 #include<bits/stdc++.h>
 using namespace std;
-vector<pair<int,int> >p;
-int n,k,arr[500001],i;
+vector<pair<ll,ll> >p;
+ll n,k,arr[500001],i,s;
 
-int main(){
-	for(scanf("%d",&n),p.resize(n);i<n;i++)scanf("%d %d",&p[i].first,&p[i].second);
-	sort(p.begin(),b.end());
-	arr[n] = 987654321;
-	for(i=n-1;i>=0;i--)arr[i]=min(p[i].first,arr[i+1]);
-	for(i=0;i<n;i++){
+bool cmp(const pair<ll,ll>&a,const pair<ll,ll>&b){
+	return a.second < b.second;
+}
+
+signed main(){
+	scanf("%lld",&n);
+	for(p.resize(n);i<n;i++)scanf("%lld %lld",&p[i].first,&p[i].second);
+	arr[n]=1234567890;
+	for (sort(p.begin(),p.end(),cmp);--i>=0;)arr[i]=min(p[i].first,arr[i+1]);
+	for (i=0;i<n;i++){
+		if(p[k].second-p[k].first<p[i].second-p[i].first)k=i;
+		s+=p[i].second;
+		printf("%lld\n", min(s-p[k].second+p[k].first,s-p[i].second+arr[i]));
 	}
 }
