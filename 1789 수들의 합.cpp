@@ -1,7 +1,6 @@
 #include<iostream>
-using namespace std;
-long long n,i;
+long n,i;
 int main(){
-	for(cin>>n;n>=0;n-=++i);
-	cout<<i-1;
+	for(std::cin>>n;n>=0;n-=++i);
+	std::cout<<i-1;
 }
