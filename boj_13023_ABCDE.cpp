@@ -3,7 +3,7 @@ using namespace std;
 vector<int>a[2001];
 int n,m,p,q,i,r,v[2001];
 void dfs(int d,int c){
-  	v[c]=1;
+	v[c]=1;
 	if(d==4){
 		r=1;
 		return;
@@ -11,7 +11,7 @@ void dfs(int d,int c){
 	for(int h:a[c]){
 		if(r)return;
 		if(!v[h])
-			dfs(d+1,h);
+		dfs(d+1,h);
 	}
 	v[c]=0;
 	return;
