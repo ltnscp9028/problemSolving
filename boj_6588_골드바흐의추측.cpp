@@ -1,6 +1,6 @@
 #include <stdio.h>
 const int m=1e6;
-int arr[m+9],n,i,j,l;
+int arr[m+9],n,i,j;
 main(){
 	for(i=2;i*i<m;i++)
 		if(!arr[i])
